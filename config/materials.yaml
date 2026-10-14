@@ -1,0 +1,69 @@
+# Material Properties Database (All values in SI units)
+# Units:
+# Moduli and Strengths: Pa
+# Poisson's ratio: dimensionless
+# CTE: 1/K
+# Thermal Conductivity: W/(m*K)
+# Density: kg/m^3
+# Specific Heat: J/(kg*K)
+# Thickness: m
+
+T300_5208_Carbon_Epoxy:
+  name: "T300/5208 Carbon/Epoxy"
+  description: "Standard high-modulus aerospace carbon/epoxy composite lamina"
+  E1: 181.0e9         # Longitudinal Young's modulus (Pa)
+  E2: 10.3e9          # Transverse Young's modulus (Pa)
+  G12: 7.17e9         # In-plane shear modulus (Pa)
+  nu12: 0.28          # Major Poisson's ratio
+  alpha1: 0.02e-6     # Longitudinal thermal expansion coefficient (1/K)
+  alpha2: 22.5e-6     # Transverse thermal expansion coefficient (1/K)
+  k1: 5.0             # Longitudinal thermal conductivity (W/m-K)
+  k2: 0.5             # Transverse thermal conductivity (W/m-K)
+  Xt: 1500.0e6        # Longitudinal tensile strength (Pa)
+  Xc: 1500.0e6        # Longitudinal compressive strength (Pa)
+  Yt: 40.0e6          # Transverse tensile strength (Pa)
+  Yc: 246.0e6         # Transverse compressive strength (Pa)
+  S: 68.0e6           # In-plane shear strength (Pa)
+  ply_thickness: 0.125e-3  # Nominal single ply thickness (m)
+  density: 1580.0     # kg/m^3
+  specific_heat: 900.0 # J/(kg-K)
+
+Glass_Epoxy:
+  name: "E-Glass/Epoxy"
+  description: "Standard structural glass fiber reinforced polymer lamina"
+  E1: 38.6e9          # Longitudinal Young's modulus (Pa)
+  E2: 8.27e9          # Transverse Young's modulus (Pa)
+  G12: 4.14e9         # In-plane shear modulus (Pa)
+  nu12: 0.26          # Major Poisson's ratio
+  alpha1: 8.6e-6      # Longitudinal thermal expansion coefficient (1/K)
+  alpha2: 22.1e-6     # Transverse thermal expansion coefficient (1/K)
+  k1: 0.35            # Longitudinal thermal conductivity (W/m-K)
+  k2: 0.35            # Transverse thermal conductivity (W/m-K)
+  Xt: 1062.0e6        # Longitudinal tensile strength (Pa)
+  Xc: 610.0e6         # Longitudinal compressive strength (Pa)
+  Yt: 31.0e6          # Transverse tensile strength (Pa)
+  Yc: 118.0e6         # Transverse compressive strength (Pa)
+  S: 72.0e6           # In-plane shear strength (Pa)
+  ply_thickness: 0.125e-3  # Nominal single ply thickness (m)
+  density: 1900.0     # kg/m^3
+  specific_heat: 1050.0 # J/(kg-K)
+
+Isotropic_Aluminum_6061:
+  name: "Aluminum 6061-T6 (Isotropic Benchmark)"
+  description: "Isotropic material benchmark for analytical verification"
+  E1: 70.0e9          # Young's modulus (Pa)
+  E2: 70.0e9          # Young's modulus (Pa)
+  G12: 26.923e9       # Shear modulus = E / (2*(1+nu)) (Pa)
+  nu12: 0.30          # Poisson's ratio
+  alpha1: 23.0e-6     # Thermal expansion coefficient (1/K)
+  alpha2: 23.0e-6     # Thermal expansion coefficient (1/K)
+  k1: 167.0           # Thermal conductivity (W/m-K)
+  k2: 167.0           # Thermal conductivity (W/m-K)
+  Xt: 276.0e6         # Tensile yield strength (Pa)
+  Xc: 276.0e6         # Compressive yield strength (Pa)
+  Yt: 276.0e6         # Transverse tensile strength (Pa)
+  Yc: 276.0e6         # Transverse compressive strength (Pa)
+  S: 160.0e6          # Shear strength (Pa)
+  ply_thickness: 1.0e-3  # Nominal thickness (m)
+  density: 2700.0     # kg/m^3
+  specific_heat: 896.0 # J/(kg-K)
