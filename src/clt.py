@@ -92,7 +92,7 @@ def parse_layup_string(layup_str: str) -> List[float]:
         return plies
 
     # Direct comma-separated or space-separated numbers
-    clean_s = re.sub(r"[\[\]/]", " ", s)
+    clean_s = re.sub(r"[\[\]/,]", " ", s)
     return [float(p) for p in clean_s.split() if p]
 
 
@@ -203,6 +203,8 @@ class Laminate:
         else:
             angles = [float(a) for a in plies_or_angles]
 
+        if not angles:
+            raise ValueError("Layup has no plies. Enter angles like [0/90]s or 0,90,90,0.")
         self.layup_angles = angles
         t_ply = thickness_per_ply if thickness_per_ply is not None else default_material.ply_thickness
         self.num_plies = len(angles)

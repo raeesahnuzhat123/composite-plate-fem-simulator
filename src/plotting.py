@@ -92,7 +92,7 @@ def plot_field_on_deformed_mesh(mesh: QuadMesh,
     if level_min > level_max:
         raise ValueError("vmin must be less than or equal to vmax")
     if level_min == level_max:
-        padding = max(abs(level_min) * 1e-6, 1e-12)
+        padding = max(abs(level_min) * 0.02, 1e-6)  # constant field: readable colorbar, no offset notation
         level_min -= padding
         level_max += padding
     levels = np.linspace(level_min, level_max, 25)
